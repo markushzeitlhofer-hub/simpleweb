@@ -7,4 +7,8 @@ describe('GET /', () => {
         expect(res.status).toBe(200);
         expect(res.text).toBe('Hi there');
     });
+    it('returns 404 for unknown routes', async () => {
+        const res = await request(app).get('/nope');
+        expect(res.status).toBe(404);
+    });
 });
