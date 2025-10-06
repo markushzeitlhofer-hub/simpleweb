@@ -1,11 +1,17 @@
+// index.js
 const express = require('express');
 
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hi there');
+    res.send('Hi there');
 });
 
-app.listen(8080, () => {
-  console.log('Listening on port 8080');
-});
+// Only listen when started directly: `node index.js`
+if (require.main === module) {
+    app.listen(8080, () => {
+        console.log('Listening on port 8080');
+    });
+}
+
+module.exports = app; // <-- export for tests

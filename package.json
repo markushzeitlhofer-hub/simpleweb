@@ -4,12 +4,15 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"(no tests yet)\" && exit 0",
-    "lint": "echo \"(no linter yet)\" && exit 0"
+    "start": "node index_old.js",
+    "test": "jest --runInBand"
   },
   "dependencies": {
     "express": "*"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
 
