@@ -4,3 +4,10 @@ npm-debug.log*
 yarn.lock
 pnpm-lock.yaml
 .env
+.DS_Store
+
+
+#filesystem
+package-lock.json
+package.json
+archive/
